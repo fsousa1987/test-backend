@@ -40,8 +40,10 @@ Para atender aos requisitos do desafio, o projeto conta com as seguintes caracte
 
 ---
 
-**Nota:** Este é um projeto fictício para demonstrar habilidades de desenvolvimento com base no desafio proposto pela Effecti. Não está diretamente associado à Effecti ou ao http://comprasnet.gov.br/.
+**Nota1:** Este é um projeto fictício para demonstrar habilidades de desenvolvimento com base no desafio proposto pela Effecti. Não está diretamente associado à Effecti ou ao http://comprasnet.gov.br/.
+
 **Nota2:** Achei muito interessante o Java scraping para retirar informações de uma página HTML. Mesmo em caso de reprovação neste processo seletivo, pretendo continuar desenvolvendo esse projeto.
+
 **Nota3:** Agradeço a todos que chegaram aqui e volte sempre.
 
 
