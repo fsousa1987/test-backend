@@ -21,27 +21,27 @@ public class BidsEntity implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String orgao;
+    private String agency;
 
     @EqualsAndHashCode.Include
     @Column(name = "codigo_uasg")
-    private String codigoUASG;
+    private String uasgCode;
 
     @Column(name = "tipo_licitacao")
-    private String tipoLicitacao;
+    private String biddingType;
 
-    private String objeto;
+    private String object;
 
     @Column(name = "data_edital")
-    private String dataEdital;
+    private String noticeDate;
 
-    private String endereco;
+    private String address;
 
-    private String telefone;
+    private String telephone;
 
     private String fax;
 
     @Column(name = "entrega_proposta")
-    private String entregaProposta;
+    private String deliveryProposal;
 
 }

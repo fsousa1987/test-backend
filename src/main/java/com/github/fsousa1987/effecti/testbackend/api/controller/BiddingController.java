@@ -1,6 +1,6 @@
 package com.github.fsousa1987.effecti.testbackend.api.controller;
 
-import com.github.fsousa1987.effecti.testbackend.api.response.BidsResponse;
+import com.github.fsousa1987.effecti.testbackend.api.response.BatchBidResponse;
 import com.github.fsousa1987.effecti.testbackend.domain.service.impl.BiddingServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.MediaType;
@@ -17,8 +17,8 @@ public class BiddingController {
     private final BiddingServiceImpl service;
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<BidsResponse> searchBidsFromWeb() {
-        BidsResponse bidsResponse = service.searchBidsFromWeb();
+    public ResponseEntity<BatchBidResponse> searchBidsFromWeb() {
+        BatchBidResponse bidsResponse = service.searchBidsFromWeb();
         return ResponseEntity.ok().body(bidsResponse);
     }
 
