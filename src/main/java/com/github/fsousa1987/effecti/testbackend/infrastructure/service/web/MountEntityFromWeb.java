@@ -27,6 +27,10 @@ public class MountEntityFromWeb {
 
         Elements fragmentRecovered = queryElementsFromHtml(normalizedHtml);
 
+        if (fragmentRecovered.isEmpty()) {
+            throw new ServiceUnavailableException("There is no bid yet for today's date. Please try again later");
+        }
+
         List<String> events = new ArrayList<>();
         List<BidsEntity> bids = new ArrayList<>();
 
@@ -35,6 +39,8 @@ public class MountEntityFromWeb {
                     .replaceAll("<.*?>", " ")
                     .replaceAll("\\s+", " "));
         }
+
+        System.out.println("stop");
 
         events.forEach(event -> {
             BidsEntity assembledEntity = assembleEntityToJson(event);
