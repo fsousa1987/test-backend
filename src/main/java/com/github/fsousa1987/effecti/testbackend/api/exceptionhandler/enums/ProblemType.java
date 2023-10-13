@@ -5,11 +5,11 @@ import lombok.Getter;
 @Getter
 public enum ProblemType {
 
-    SERVICE_UNAVAILABLE_EXCEPTION ("Service temporarily unavailable");
+    SERVICE_UNAVAILABLE_EXCEPTION();
 
     private final String title;
 
-    ProblemType(String title) {
-        this.title = title;
+    ProblemType() {
+        this.title = "Service temporarily unavailable";
     }
 }
