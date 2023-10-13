@@ -6,13 +6,14 @@ import lombok.*;
 import java.io.Serial;
 import java.io.Serializable;
 
-@Entity
+@SuppressWarnings("JpaDataSourceORMInspection")
 @Table(name = "tb_bids")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
 public class BidsEntity implements Serializable {
 
     @Serial
