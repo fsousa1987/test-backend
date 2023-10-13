@@ -7,6 +7,7 @@ import java.io.Serial;
 import java.io.Serializable;
 
 @Entity
+@Table(name = "tb_bids")
 @Data
 @Builder
 @AllArgsConstructor
@@ -24,15 +25,16 @@ public class BidsEntity implements Serializable {
     private String agency;
 
     @EqualsAndHashCode.Include
-    @Column(name = "codigo_uasg")
+    @Column(name = "uasg_code")
     private String uasgCode;
 
-    @Column(name = "tipo_licitacao")
+    @Column(name = "bidding_type")
     private String biddingType;
 
+    @Column(columnDefinition = "text")
     private String object;
 
-    @Column(name = "data_edital")
+    @Column(name = "notice_date")
     private String noticeDate;
 
     private String address;
@@ -41,7 +43,7 @@ public class BidsEntity implements Serializable {
 
     private String fax;
 
-    @Column(name = "entrega_proposta")
+    @Column(name = "delivery_proposal")
     private String deliveryProposal;
 
 }

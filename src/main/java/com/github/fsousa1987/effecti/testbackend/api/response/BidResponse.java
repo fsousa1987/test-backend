@@ -15,6 +15,8 @@ import org.springframework.stereotype.Component;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class BidResponse {
 
+    private Long id;
+
     private String agency;
 
     private String uasgCode;
