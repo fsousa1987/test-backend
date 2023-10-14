@@ -49,8 +49,9 @@ public class BiddingServiceImpl implements BiddingService {
         List<BidsEntity> list = bidsFound.stream().filter(bidding -> !bidsFound.contains(bidding)).toList();
 
         if (!list.isEmpty()) {
-            repository.saveAll(list);
-            return repository.findAll();
+            list = repository.saveAll(list);
+            bidsFound.addAll(list);
+            return bidsFound;
         }
         return bidsFound;
     }
